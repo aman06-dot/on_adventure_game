@@ -1,0 +1,75 @@
+import time
+
+name=input("Enter Your Name: ")
+print("Welcome "+name+" to the Game !")
+play=input("Do you wanna play ? (yes/no): ").lower()
+if play=="yes":
+    print("we are going to enter the game....")
+    gender=input("Choose your gender (male/female): ").lower()
+    if gender=="male":
+        print("Time to choose your character.")
+        print("Press 1: BATMAN")
+        print("Press 2: SPIDERMAN")
+        print("Press 3: IRONMAN")
+        character=input("Enter your choice: (1/2/3)")
+        if character=="1":
+            print("You choose BATMAN ready for save the world.")
+            weapon=input("Choose your weapon: (sword/axe)")
+            if weapon=='sword' or weapon=='axe':
+                print('You choosed your weapon.')
+                time.sleep(2)
+                print('Now,it is time to play.')
+                time.sleep(5)
+                print('There is a joker in the city who is robbery the bank Now you have to rescue the bank and bankers.')
+                medium=input('You wanna go with : (car/bike/fly)')
+                if medium=='car':
+                    print('It will take 7 sec.')
+                    time.sleep(7)
+                    print('##### MISSION BUSTED #####')
+                    print('You are too late joker killed bankers and goes away.')
+                elif medium=='bike':
+                    print('It will take 5 sec.')
+                    time.sleep(5)
+                    print('### MISSION BUSTED ###')
+                    print('You are late joker killed some bankers and goes away.')
+                elif medium=='fly':
+                    print('It will take 3 sec.')
+                    time.sleep(3)
+                    print('Great choice ',name)
+                    print('***** MISSION PASSED *****')
+                    print('You killed the joker and rescue bank and bankers.')
+                    nextmission=input('You wanna play more or over here : (play/over) ').lower()
+                    
+                else:
+                    print('choose your medium wisely.')
+                
+            else:
+                print('Choose your weapon wisely.')
+            
+        elif character=="2":
+            print("You choose SPIDERMAN ready for the jump from buildings.")
+            print('Coming Soon.....')
+        elif character=="3":
+            print("You choose IRONMAN ready for the fight.")
+            print('Coming Soon.....')
+        else:
+            print("INVALID CHOICE PLEASE CHOOSE WISELY.")
+        
+
+    elif gender=="female":
+        print("It seem like your barbie doll is not ready yet....")
+        time.sleep(3)
+        print("It seem like your makeup game is also not ready....")
+        time.sleep(2)
+        print("coming soon.....")
+
+    else:
+        print("Okay you have to wait it seem like coming soon.....")
+
+elif play=="no":
+    print("we are going to exit the game....")
+    for a in range(1,6):
+        print("*",end="")
+        time.sleep(1)
+else:
+    print("INVALID CHOICE PLEASE CHOOSE WISELY.")
